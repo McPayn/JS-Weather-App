@@ -4,6 +4,8 @@
 
 body {
   background-image: url('img/rainy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: rgb(82, 76, 76);
 }
 
@@ -15,6 +17,7 @@ body {
 .welcome-msg {
   font-size: 36px;
   font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .search-bar {
