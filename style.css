@@ -1,0 +1,26 @@
+* {
+  font-family: 'Verdana'
+}
+
+body {
+  background-color: rgb(82, 76, 76);
+}
+
+.main-box {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.welcome-msg {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.search-bar {
+  width: 500px;
+  height: 35px;
+  background-color: rgb(193, 183, 183);
+  border-radius: 15px;
+  text-align: center;
+  border: none;
+}
