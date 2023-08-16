@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="/script.js"></script>
     <title>Vite App</title>
   </head>
   <body>
     <div class="main-box">
-      <p class="welcome-msg">
+      <p id="city" class="welcome-msg">
         Welcome to my weather app!
       </p>
-      <input type="text" class="search-bar" placeholder="Search Cities">
+      <input type="text" id="search-city" class="search-bar" onchange="" placeholder="Search Cities">
+      <button class="search-button" onclick="changeCity(document.getElementById('search-city').value)">Search</button>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
