@@ -17,7 +17,7 @@ let city = "";
 let state = "";
 let location = "";
 let search_bar = document.getElementById('search-city');
-search_bar.addEventListener('change', (event) => {
+search_bar.addEventListener('keydown', (event) => {
   searchCities(search_bar.value).then(
     res => {
       console.log(res.data);
