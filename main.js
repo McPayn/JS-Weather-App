@@ -23,9 +23,15 @@ search_bar.addEventListener('change', (event) => {
       console.log(res.data);
       // Tentative name change based on first search result
       // Locations data are stored under (res.data.results[0-9])
-      // Need to pull lat/lon data as well as well as country data to display country instead of state
+      // Need to pull lat/lon data for weather
       city = res.data.results[0].name;
-      state = res.data.results[0].admin1;
+      // If city is not in the US, display country instead of state
+      if (res.data.results[0].country_code === 'US') {
+        state = res.data.results[0].admin1;
+      } else {
+        state = res.data.results[0].country;
+      }
+
       location = city + ", " + state;
       document.getElementById('city').innerHTML = location;
     }

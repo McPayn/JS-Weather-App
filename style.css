@@ -30,6 +30,7 @@ body {
   width: 400px;
   height: 40px;
   background-color: rgb(193, 183, 183);
+  font-size: 16px;
   border-radius: 15px;
   margin-left: 15%;
   text-align: center;
@@ -38,6 +39,7 @@ body {
 
 .search-button {
   height: 40px;
+  font-weight: bold;
   background: transparent;
   position: relative; right: 80px;
   border: none;
