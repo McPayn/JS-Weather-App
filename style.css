@@ -45,6 +45,16 @@ body {
   border: none;
 }
 
+.temp-box {
+  text-align: center;
+  height: 300px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
 .search-button:active {
   color: rgb(202, 193, 193)
 }

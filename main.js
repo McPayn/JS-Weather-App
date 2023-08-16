@@ -27,8 +27,20 @@ search_bar.addEventListener('keyup', (event) => {
       } else {
         state = res.data.results[0].country;
       }
+      let lat = res.data.results[0].latitude;
+      let lon = res.data.results[0].longitude;
+      let timezone = res.data.results[0].timezone;
       location = city + ", " + state;
       document.getElementById('city').innerHTML = location;
+      // Automatically updates temperature information as it's typed in
+      // Component is working, but needs to be restructured to update weather info when desired city is chosen from list
+      getWeather(lat, lon, timezone).then(
+        res => {
+          console.log(res.data);
+          console.log(res.data.hourly.temperature_2m[0]);
+          document.getElementById('temperature').innerHTML = res.data.hourly.temperature_2m[0] + '&deg F';
+        }
+      )
     }
   )
 })
