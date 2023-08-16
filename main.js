@@ -10,14 +10,10 @@ getWeather(10, 10, Intl.DateTimeFormat().resolvedOptions().timeZone).then(
   }
 )
 
-let search_button = document.getElementById('search-button');
-
 // Listens for updates on the search bar and calls API to search for cities that match string
-let city = "";
-let state = "";
-let location = "";
+let city, state, location = "";
 let search_bar = document.getElementById('search-city');
-search_bar.addEventListener('keydown', (event) => {
+search_bar.addEventListener('keyup', (event) => {
   searchCities(search_bar.value).then(
     res => {
       console.log(res.data);
@@ -31,7 +27,6 @@ search_bar.addEventListener('keydown', (event) => {
       } else {
         state = res.data.results[0].country;
       }
-
       location = city + ", " + state;
       document.getElementById('city').innerHTML = location;
     }
