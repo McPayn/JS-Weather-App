@@ -1,5 +1,5 @@
-import { getWeather } from './weather';
-import { searchCities } from './city';
+import { getWeather } from './weather.js';
+import { searchCities } from './city.js';
 
 // Retrieves desired API information on page load
 // Need to add listener for search button (or select click, undecided) to call this function with
