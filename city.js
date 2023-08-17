@@ -1,5 +1,3 @@
-import axios from "axios";
-
 // API call that searches for passed in city
 // Nothing more should need to be done here
 export function searchCities(city) {

@@ -1,5 +1,3 @@
-import axios from "axios";
-
 // API call to retrieve desired weather data
 // Nothing more should need to be done here
 export function getWeather(lat, lon, timezone) {
