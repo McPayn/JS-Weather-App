@@ -34,11 +34,20 @@ search_bar.addEventListener('keyup', (event) => {
       document.getElementById('city').innerHTML = location;
       // Automatically updates temperature information as it's typed in
       // Component is working, but needs to be restructured to update weather info when desired city is chosen from list
+      
       getWeather(lat, lon, timezone).then(
         res => {
-          console.log(res.data);
-          console.log(res.data.hourly.temperature_2m[0]);
-          document.getElementById('temperature').innerHTML = res.data.hourly.temperature_2m[0] + '&deg F';
+          console.log(res);
+          // Get current/high/low temp information for location and displays it on screen
+          document.getElementById('temperature').innerHTML = res.current.currentTemp + '&deg F';
+          document.getElementById('high_temp').innerHTML = res.current.highTemp + '&deg F';
+          document.getElementById('low_temp').innerHTML = res.current.lowTemp + '&deg F';
+          // Loops through and writes the 7-day forecast information to screen
+          for (let i = 1; i < 7; i++ ) {
+            document.getElementById('day' + i).innerHTML = res.daily[i].timestamp.slice(5);
+            document.getElementById('high_temp' + i).innerHTML = res.daily[i].maxTemp + '&deg F';
+            document.getElementById('low_temp' + i).innerHTML = res.daily[i].minTemp + '&deg F';
+          } 
         }
       )
     }
