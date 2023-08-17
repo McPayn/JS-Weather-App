@@ -34,7 +34,8 @@ function getDailyWeather({ daily }) {
         return {
             timestamp: time,
             maxTemp: Math.round(daily.temperature_2m_max[index]),
-            minTemp: Math.round(daily.temperature_2m_min[index])
+            minTemp: Math.round(daily.temperature_2m_min[index]),
+            rainChance: Math.round(daily.precipitation_probability_max[index])
         }
     })
 }

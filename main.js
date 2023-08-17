@@ -33,11 +33,13 @@ search_bar.addEventListener('keyup', (event) => {
           document.getElementById('temperature').innerHTML = res.current.currentTemp + '&deg F';
           document.getElementById('high_temp').innerHTML = res.current.highTemp + '&deg F';
           document.getElementById('low_temp').innerHTML = res.current.lowTemp + '&deg F';
+          document.getElementById('rain_chance').innerHTML = res.daily[0].rainChance + '%';
           // Loops through and writes the 7-day forecast information to screen
           for (let i = 1; i < 7; i++ ) {
             document.getElementById('day' + i).innerHTML = res.daily[i].timestamp.slice(5);
             document.getElementById('high_temp' + i).innerHTML = res.daily[i].maxTemp + '&deg F';
             document.getElementById('low_temp' + i).innerHTML = res.daily[i].minTemp + '&deg F';
+            document.getElementById('rain_chance' + i).innerHTML = res.daily[i].rainChance + '%';
           } 
         }
       )
