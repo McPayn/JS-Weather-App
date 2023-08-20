@@ -17,9 +17,9 @@ function positionSuccess({ coords }) {
       document.getElementById('low_temp').innerHTML = res.current.lowTemp + '&deg F';
       document.getElementById('rain_chance').innerHTML = res.daily[0].rainChance + '%';
       if (parseInt(res.daily[0].rainChance) >= 50) {
-        document.getElementById("day0icon").src="/img/rain-icon.png";
+        document.getElementById("day0icon").src="./img/rain-icon.png";
       } else {
-        document.getElementById("day0icon").src="/img/sun-icon.png";
+        document.getElementById("day0icon").src="./img/sun-icon.png";
       }
       // Loops through and writes the 7-day forecast information to screen
       for (let i = 1; i < 7; i++ ) {
@@ -69,9 +69,9 @@ search_bar.addEventListener('keyup', (event) => {
           document.getElementById('low_temp').innerHTML = res.current.lowTemp + '&deg F';
           document.getElementById('rain_chance').innerHTML = res.daily[0].rainChance + '%';
           if (parseInt(res.daily[0].rainChance) >= 50) {
-            document.getElementById("day0icon").src="/img/rain-icon.png";
+            document.getElementById("day0icon").src="./img/rain-icon.png";
           } else {
-            document.getElementById("day0icon").src="/img/sun-icon.png";
+            document.getElementById("day0icon").src="./img/sun-icon.png";
           }
           // Loops through and writes the 7-day forecast information to screen
           for (let i = 1; i < 7; i++ ) {
@@ -80,9 +80,9 @@ search_bar.addEventListener('keyup', (event) => {
             document.getElementById('low_temp' + i).innerHTML = res.daily[i].minTemp + '&deg F';
             document.getElementById('rain_chance' + i).innerHTML = res.daily[i].rainChance + '%';
             if (parseInt(res.daily[i].rainChance) >= 50) {
-              document.getElementById("day" + i + "icon").src="/img/rain-icon.png";
+              document.getElementById("day" + i + "icon").src="./img/rain-icon.png";
             } else {
-              document.getElementById("day" + i + "icon").src="/img/sun-icon.png";
+              document.getElementById("day" + i + "icon").src="./img/sun-icon.png";
             }
           } 
         }
