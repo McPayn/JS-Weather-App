@@ -32,7 +32,8 @@ function positionSuccess({ coords }) {
         } else {
           document.getElementById("day" + i + "icon").src="./img/sun-icon.png";
         }
-      } 
+      }
+      document.getElementById('city').innerHTML = 'Current Location';
     }
   )
 }

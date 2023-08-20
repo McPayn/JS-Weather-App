@@ -43,7 +43,7 @@ body {
   font-size: 16px;
   border-radius: 15px;
   text-align: center;
-  border: none;
+  border: solid rgb(48, 44, 44);
   flex: 1;
 }
 
