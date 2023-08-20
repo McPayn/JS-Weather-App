@@ -27,6 +27,11 @@ function positionSuccess({ coords }) {
         document.getElementById('high_temp' + i).innerHTML = res.daily[i].maxTemp + '&deg F';
         document.getElementById('low_temp' + i).innerHTML = res.daily[i].minTemp + '&deg F';
         document.getElementById('rain_chance' + i).innerHTML = res.daily[i].rainChance + '%';
+        if (parseInt(res.daily[i].rainChance) >= 50) {
+          document.getElementById("day" + i + "icon").src="./img/rain-icon.png";
+        } else {
+          document.getElementById("day" + i + "icon").src="./img/sun-icon.png";
+        }
       } 
     }
   )
