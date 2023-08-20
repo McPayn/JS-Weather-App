@@ -12,5 +12,5 @@ Currently, the application will only provide you with the first result when sear
 ## To-Do
 * Create drop-down list in search to allow user to pick from multiple search results
 * ~~Implement high/low temps of current day, as well as 7 day forecast~~ DONE
-* Implement rain chance for each day
-* Add icons that relate to current weather
+* ~~Implement rain chance for each day~~ DONE
+* ~~Add icons that relate to current weather~~ DONE
