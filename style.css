@@ -6,6 +6,7 @@
 body {
   background-color: rgb(71, 90, 199);
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
