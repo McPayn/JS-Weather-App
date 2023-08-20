@@ -1,6 +1,6 @@
 # Weather Web App
 A web application built using HTML, CSS, and JavaScript
-![Weather App Screenshot](![image](https://github.com/McPayn/JS-Weather-App/assets/107960406/ad4fdff8-805d-4758-a19b-1fe5eb622b38))
+![Weather App Screenshot](https://github.com/McPayn/JS-Weather-App/assets/107960406/ad4fdff8-805d-4758-a19b-1fe5eb622b38)
 
 ## How It Works
 Using [open-meteo's](https://open-meteo.com) Weather Forecast and Geocoding APIs, this web app will allow you to search for
