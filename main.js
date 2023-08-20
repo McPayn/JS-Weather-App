@@ -1,8 +1,37 @@
 import { getWeather } from './weather.js';
 import { searchCities } from './city.js';
 
-// Listens for updates on the search bar and calls API to search for cities that match string
 let city, state, location = "";
+// Gets user location
+navigator.geolocation.getCurrentPosition(positionSuccess, positionError)
+
+// On page load, after allowing location to be shared, gets user's current location's weather data
+// TODO: Retrieve location name from returned coordinates to display in app
+function positionSuccess({ coords }) {
+  getWeather(coords.latitude, coords.longitude, Intl.DateTimeFormat().resolvedOptions().timeZone).then(
+    res => {
+      console.log(res);
+      // Get current/high/low temp information for location and displays it on screen
+      document.getElementById('temperature').innerHTML = res.current.currentTemp + '&deg F';
+      document.getElementById('high_temp').innerHTML = res.current.highTemp + '&deg F';
+      document.getElementById('low_temp').innerHTML = res.current.lowTemp + '&deg F';
+      document.getElementById('rain_chance').innerHTML = res.daily[0].rainChance + '%';
+      // Loops through and writes the 7-day forecast information to screen
+      for (let i = 1; i < 7; i++ ) {
+        document.getElementById('day' + i).innerHTML = res.daily[i].timestamp.slice(5);
+        document.getElementById('high_temp' + i).innerHTML = res.daily[i].maxTemp + '&deg F';
+        document.getElementById('low_temp' + i).innerHTML = res.daily[i].minTemp + '&deg F';
+        document.getElementById('rain_chance' + i).innerHTML = res.daily[i].rainChance + '%';
+      } 
+    }
+  )
+}
+
+function positionError() {
+  alert("Error getting location");
+}
+
+// Listens for updates on the search bar and calls API to search for cities that match string
 let search_bar = document.getElementById('search-city');
 search_bar.addEventListener('keyup', (event) => {
   searchCities(search_bar.value).then(

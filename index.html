@@ -5,154 +5,118 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script type="module" src="./main.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="main-box">
-      <p id="city" class="welcome-msg">
-        Welcome to my weather app!
-      </p>
-      <input type="text" id="search-city" class="search-bar" onchange="" placeholder="Search Cities">
-      <div class="current-temp">
-        <p class="temp" id="day">
-        </p>
-        <p class="temp">
-          Current: 
-        </p>
-        <p id="temperature" class="temp">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance" class="temp">
-        </p>
+      <div class="top-bar">
+        <div class="current-temp0">
+          <img src="img/rain-icon.png" id="day0icon">
+          <div class="current-container">
+            <div id="temperature" class="temp0">
+            </div>
+            <div class="temp0">
+              High: <span id="high_temp" class="temp0"></span>
+            </div>
+            <div class="temp0">
+              Low: <span id="low_temp" class="temp0"></span>
+            </div>
+            <div class="temp0">
+              Precip: <span id="rain_chance" class="temp0"></span>
+            </div>
+          </div>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search-city" class="search-bar" onchange="" placeholder="Search Cities">
+        </div>
+        <div id="city" class="welcome-msg">
+        </div>
       </div>
-      <div class="current-temp">
-        <p class="temp" id="day1">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp1" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp1" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance1" class="temp">
-        </p>
-      </div>
-      <div class="current-temp">
-        <p class="temp" id="day2">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp2" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp2" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance2" class="temp">
-        </p>
-      </div>
-      <div class="current-temp">
-        <p class="temp" id="day3">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp3" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp3" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance3" class="temp">
-        </p>
-      </div>
-      <div class="current-temp">
-        <p class="temp" id="day4">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp4" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp4" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance4" class="temp">
-        </p>
-      </div>
-      <div class="current-temp">
-        <p class="temp" id="day5">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp5" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp5" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance5" class="temp">
-        </p>
-      </div>
-      <div class="current-temp">
-        <p class="temp" id="day6">
-        </p>
-        <p class="temp">
-          High:
-        </p>
-        <p id="high_temp6" class="temp">
-        </p>
-        <p class="temp">
-          Low:
-        </p>
-        <p id="low_temp6" class="temp">
-        </p>
-        <p class="temp">
-          Precip:
-        </p>
-        <p id="rain_chance6" class="temp">
-        </p>
-      </div>
+      <div class="seven-day-forecast">
+        <div class="current-temp">
+          <div class="temp" id="day1">
+          </div>
+          <div class="temp">
+            High: <span id="high_temp1" class="temp"></span>
+          </div>
+          <div class="temp">
+            Low: <span id="low_temp1" class="temp"></span>
+          </div>
+          <div class="temp">
+            Precip: <span id="rain_chance1" class="temp"></span>
+          </div>
+        </div>
+        <div class="current-temp">
+          <div class="temp" id="day2">
+          </div>
+          <div class="temp">
+            High: <span id="high_temp2" class="temp"></span>
+          </div>
+          <div class="temp">
+            Low: <span id="low_temp2" class="temp"></span>
+          </div>
+          <div class="temp">
+            Precip: <span id="rain_chance2" class="temp"></span>
+          </div>
+        </div>
+        <div class="current-temp">
+          <div class="temp" id="day3">
+          </div>
+          <div class="temp">
+            High: <span id="high_temp3" class="temp"></span>
+          </div>
+          <div class="temp">
+            Low: <span id="low_temp3" class="temp"></span>
+          </div>
+          <div class="temp">
+            Precip: <span id="rain_chance3" class="temp"></span>
+          </div>
+        </div>
+        <div class="current-temp">
+          <div class="temp" id="day4">
+          </div>
+          <div class="temp">
+            High: <span id="high_temp4" class="temp"></span>
+          </div>
+          <div class="temp">
+            Low: <span id="low_temp4" class="temp"></span>
+          </div>
+          <div class="temp">
+            Precip: <span id="rain_chance4" class="temp"></span>
+          </div>
+        </div>
+        <div class="current-temp">
+          <div class="temp" id="day5">
+          </div>
+          <div class="temp">
+            High: <span id="high_temp5" class="temp"></span>
+          </div>
+          <div class="temp">
+            Low: <span id="low_temp5" class="temp"></span>
+          </div>
+          <div class="temp">
+            Precip: <span id="rain_chance5" class="temp"></span>
+          </div>
+        </div>
+        <div class="current-temp">
+          <div class="temp" id="day6">
+          </div>
+          <div class="temp">
+            High: <span id="high_temp6" class="temp"></span>
+          </div>
+          <div class="temp">
+            Low: <span id="low_temp6" class="temp"></span>
+          </div>
+          <div class="temp">
+            Precip: <span id="rain_chance6" class="temp"></span>
+          </div>
+        </div>
+      </div> 
     </div>
   </body>
 </html>
