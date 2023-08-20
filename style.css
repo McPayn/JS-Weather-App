@@ -17,6 +17,9 @@ body {
   background-color: rgb(82, 76, 76, .65);
   border-radius: 20px;
   text-align: center;
+  padding: 2%;
+  max-width: 100%;
+  height: auto;
 }
 
 .search-container {
@@ -59,17 +62,23 @@ body {
 
 .seven-day-forecast {
   display: flex;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .current-temp {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin: 20px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  max-width: 100%;
+  padding: 10px;
   height: auto;
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .current-container {
