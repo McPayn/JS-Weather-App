@@ -19,7 +19,7 @@ body {
   text-align: center;
   padding: 2%;
   max-width: 100%;
-  height: auto;
+  min-height: 40vh;
 }
 
 .search-container {
@@ -30,7 +30,7 @@ body {
 
 .welcome-msg {
   width: 200px;
-  font-size: 56px;
+  font-size: 3vw;
   font-weight: bold;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   flex: 1;
@@ -94,16 +94,16 @@ body {
 
 .day-0-icon {
   width: auto;
-  height: 120px;
+  height: 10vh;
 }
 .current-temperature {
-  font-size: 56px;
+  font-size: 3vw;
   font-weight: bold;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   flex: 1;
 }
 .temp {
-  font-size: 24px;
+  font-size: 1vw;
   font-weight: bold;
   padding: 10px;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -111,7 +111,7 @@ body {
 }
 
 .temp0 {
-  font-size: 24px;
+  font-size: 1vw;
   font-weight: bold;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   flex: 1 1 auto;
