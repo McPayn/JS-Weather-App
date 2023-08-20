@@ -31,8 +31,9 @@ body {
 .welcome-msg {
   width: 200px;
   font-size: 3vw;
+  color: white;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   font-weight: bold;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   flex: 1;
 }
 
@@ -99,20 +100,23 @@ body {
 .current-temperature {
   font-size: 3vw;
   font-weight: bold;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: white;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   flex: 1;
 }
 .temp {
   font-size: 1vw;
   font-weight: bold;
   padding: 10px;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: white;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   flex: 1;
 }
 
 .temp0 {
   font-size: 1vw;
   font-weight: bold;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: white;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
   flex: 1 1 auto;
 }
