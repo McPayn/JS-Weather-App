@@ -8,11 +8,15 @@ export function getWeather(lat, lon, timezone) {
             timezone
         },
     }).then(({data}) => {
-        console.log(data);
+        //console.log(data);
+        console.log(data[1]);
         // Calls functions to parse and return specific weather data
         return {
-            current: getCurrentWeather(data),
-            daily: getDailyWeather(data)
+            // API request used to only send 1 iteration of data
+            // Randomly began to send an array of 2 iterations of data, which caused app to break
+            // Fixed by specifying which index to parse data from
+            current: getCurrentWeather(data[1]),
+            daily: getDailyWeather(data[1])
         }
     })
 }
